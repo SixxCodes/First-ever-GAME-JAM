@@ -1,14 +1,45 @@
-[gd_scene format=3 uid="uid://dmjp7765x4ypx"]
+[gd_scene load_steps=5 format=3 uid="uid://dmjp7765x4ypx"]
+
+[ext_resource type="Texture2D" uid="uid://0wgncaw2dmp8" path="res://assets/sprites/Road3.png" id="1_8wwxs"]
+[ext_resource type="Texture2D" uid="uid://birpr0urftdu0" path="res://assets/sprites/TempSky.png" id="1_a8nxr"]
+[ext_resource type="Texture2D" uid="uid://08ns5ggadlw7" path="res://assets/sprites/TempFarMountains.png" id="2_dm1mn"]
+[ext_resource type="Texture2D" uid="uid://bstuethcf4su" path="res://assets/sprites/TempMountains.png" id="2_ku37f"]
 
 [node name="Parallax" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Road" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-position = Vector2(1, -25)
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0, 0)
 
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture_filter = 1
+texture = ExtResource("1_a8nxr")
+centered = false
+
+[node name="FarMountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(320, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/FarMountains"]
+modulate = Color(1, 1, 1, 0.576471)
+texture_filter = 1
+texture = ExtResource("2_dm1mn")
+centered = false
+
+[node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(320, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+texture_filter = 1
+texture = ExtResource("2_ku37f")
+centered = false
+
+[node name="Road" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(320, 0)
+
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Road"]
-position = Vector2(55, 70)
+texture_filter = 1
+texture = ExtResource("1_8wwxs")
 centered = false

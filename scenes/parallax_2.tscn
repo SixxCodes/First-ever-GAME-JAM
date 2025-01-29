@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy7u6llae017k"]
+
+[ext_resource type="Texture2D" uid="uid://xqpqhbubo7k8" path="res://assets/sprites/VeryNearGrass.png" id="1_ubsr1"]
+
+[node name="parallax2" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(1, 1, 1, 0.380392)
+position = Vector2(1, -12)
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(320, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture = ExtResource("1_ubsr1")
+centered = false

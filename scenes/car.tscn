@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bted5mbu5spc5"]
+[gd_scene load_steps=14 format=3 uid="uid://bted5mbu5spc5"]
 
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_1eura"]
 [ext_resource type="Texture2D" uid="uid://dakfmcon3f1k4" path="res://assets/sprites/Car.png" id="1_2va65"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2a4j"]
@@ -67,12 +68,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vgx"]
-size = Vector2(28, 39)
+size = Vector2(28, 25)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gfx1"]
 distance = -20.5
 
 [node name="Car" type="CharacterBody2D"]
+script = ExtResource("1_1eura")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, -31)
@@ -82,7 +84,7 @@ autoplay = "run"
 frame_progress = 0.981296
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -20.5)
+position = Vector2(-4, -13.5)
 shape = SubResource("RectangleShape2D_u8vgx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

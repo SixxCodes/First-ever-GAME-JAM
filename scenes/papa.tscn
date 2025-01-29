@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdp67e084l68l"]
+[gd_scene load_steps=9 format=3 uid="uid://cdp67e084l68l"]
 
 [ext_resource type="Texture2D" uid="uid://br41b0nc8thif" path="res://assets/sprites/New Piskel.png" id="1_2fldn"]
-[ext_resource type="Script" path="res://scripts/papa.gd" id="1_ocpfq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbpcc"]
 atlas = ExtResource("1_2fldn")
@@ -45,7 +44,6 @@ size = Vector2(4.5, 23)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wb8pc"]
 
 [node name="Papa" type="CharacterBody2D"]
-script = ExtResource("1_ocpfq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -14)

@@ -7,13 +7,13 @@
 [node name="Game" type="Node2D"]
 
 [node name="Parallax" parent="." instance=ExtResource("3_6hsc3")]
-position = Vector2(-50, 61)
 
 [node name="Papa" parent="." instance=ExtResource("1_mvuww")]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, -45)
-zoom = Vector2(4, 4)
+position = Vector2(21, 152)
 
 [node name="Car" parent="." instance=ExtResource("2_8yx04")]
-position = Vector2(-47, 0)
+position = Vector2(78, 157)
+
+[node name="Camera2D" type="Camera2D" parent="Car"]
+position = Vector2(96, -71)
+zoom = Vector2(4, 4)
