@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://bted5mbu5spc5"]
+
+[ext_resource type="Texture2D" uid="uid://dakfmcon3f1k4" path="res://assets/sprites/Car.png" id="1_2va65"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2a4j"]
+atlas = ExtResource("1_2va65")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj620"]
+atlas = ExtResource("1_2va65")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwstq"]
+atlas = ExtResource("1_2va65")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v4kt"]
+atlas = ExtResource("1_2va65")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utf1d"]
+atlas = ExtResource("1_2va65")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obnbv"]
+atlas = ExtResource("1_2va65")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6c0s"]
+atlas = ExtResource("1_2va65")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m5mo"]
+atlas = ExtResource("1_2va65")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tn3jd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2a4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj620")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwstq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v4kt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utf1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obnbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6c0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m5mo")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vgx"]
+size = Vector2(28, 39)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gfx1"]
+distance = -20.5
+
+[node name="Car" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -31)
+sprite_frames = SubResource("SpriteFrames_tn3jd")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.981296
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -20.5)
+shape = SubResource("RectangleShape2D_u8vgx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-4, -20.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_8gfx1")

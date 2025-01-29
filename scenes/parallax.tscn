@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dmjp7765x4ypx"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Road" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+position = Vector2(1, -25)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Road"]
+position = Vector2(55, 70)
+centered = false
