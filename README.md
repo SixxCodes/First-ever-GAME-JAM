@@ -25,3 +25,8 @@ As the miles pass, the journey feels different in ways you can’t quite put you
 ### To-Do next:
 * fix bug
 * make mini-games
+
+### Documentary (Started Jan 23):
+* Day 1: Learned GDScript
+* Day 2: Draw Papa and Car sprite. Added Parallax tree.
+* Day 3: Draw Parallax Background (Sky, Far Mountains, Mountains, Road, Grass). Made parallax function.
